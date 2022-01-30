@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    background: rgb(110, 35, 35);
+color: white;
+font-size: large;
+}
+
+.header .logo {
+    display: flex;
+    float: right;
+}
+
+.header ul {
+    display: flex;
+    font-size: large;
+    float: right;
+}
+
+.header li {
+    list-style: none;
+    justify-content: space-between;
+    float: right;
+    font: larger;
+    text-decoration: none;
+}
