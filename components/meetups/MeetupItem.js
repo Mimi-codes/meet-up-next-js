@@ -1,12 +1,17 @@
 //import Card from '../ui/Card';
 import classes from './MeetupItem.module.css';
-
+import {useRouter} from 'next/router';
+ 
 function MeetupItem(props) {
-// replace the first div with card component
+const router = useRouter()
+    // replace the first div with card component
+function showDetailsHandler(){
+router.push('/' + props.id);
+}
 
 return (
     <li className={classes.item}>
-        <div>
+       <div>
             <div className={classes.image}>
                 <img src={props.image} alt={props.title} />
             </div>
@@ -16,8 +21,8 @@ return (
                 <address>{props.address}</address>
             </div>
 
-            <div className={classes.actions}>
-                <button>Show Details</button>
+            <div className={classes.actions}>  
+                <button onClick = {showDetailsHandler}>Show Details</button>
             </div>
         </div>
     </li>
