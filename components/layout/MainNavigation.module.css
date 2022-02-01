@@ -3,23 +3,29 @@
     background: rgb(110, 35, 35);
 color: white;
 font-size: large;
+height: 5rem;
 }
 
-.header .logo {
+.logo {
     display: flex;
     float: right;
+    font-size: 2rem;
+    margin: 1rem 1rem 1rem 5rem;
 }
 
-.header ul {
+.header nav ul li {
     display: flex;
     font-size: large;
     float: right;
 }
 
-.header li {
-    list-style: none;
-    justify-content: space-between;
-    float: right;
-    font: larger;
+.header a {
+    color: white;
     text-decoration: none;
+    font-size: larger;
+    float: right;
+    justify-content: space-between;
+margin-top: 0.4rem;
+margin-left: 22rem;
 }
+

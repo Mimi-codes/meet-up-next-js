@@ -1,6 +1,7 @@
 //our-domain.com/
 //import Layout from "../components/layout/Layout";
 //import Layout from "../components/layout/Layout";
+import { useEffect, useState } from "react";
 import MeetupList from "../components/meetups/MeetupList";
 
 const DUMMY_MEETUPS =  [
@@ -20,11 +21,36 @@ const DUMMY_MEETUPS =  [
     }
 
 ]
-function HomePage() {
-    return <>
-        <MeetupList meetups={DUMMY_MEETUPS} />
+function HomePage(props) {
+return <>
+        <MeetupList meetups={props.meetups} />
 </>
 }
+
+
+//export async function getServerSideProps(context) {
+//const req = context.req;
+//const res = context.res;
+
+    //fetch data from an API
+    
+  //  return {
+//props: {
+  //  meetups: DUMMY_MEETUPS
+//}
+  //  }
+//}
+
+export async function getStaticProps() {
+    //fetch data from an API
+    //always need to return an object
+  return {
+        props: {
+            meetups: DUMMY_MEETUPS 
+        },
+        revalidate: 10
+    }
+ }
 
 export default HomePage;
 

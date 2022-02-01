@@ -11,8 +11,7 @@ li .item {
     border-radius: 1rem;
     align-items: center;
     width: auto;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin: 1rem 35rem;
 }
 
 
@@ -29,4 +28,5 @@ li .item {
     align-items: center;
     border-radius: 25px;
     font-weight: bold;
+    margin: 1rem 45rem;
 }
